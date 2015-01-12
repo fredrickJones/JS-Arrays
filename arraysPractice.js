@@ -132,12 +132,12 @@ var str = 'this is my sentence';
 //Write a function called reverse that takes is given str as it's only argument and returns that string after it's been reversed
 
   //Code Here
-var reverse = function() {
+var reverse = function(str) {
   str = str.reverse();
   return str;
 };
 
-reverse();
+reverse(str);
 
 
 
@@ -233,18 +233,21 @@ for(var i = 0; i < num1; i++){
 for(var i = 0; i < num2; i++){
   arr2.push(i);
 };
+
 //Above is some code that adds a random number to both arr1 and arr2.
 //Write a function that is given arr1 and arr2 is it's only arguments. Return the array which is longest.
 
   //Code Here
-var longest = function() {
+var longest = function(arr1, arr2) {
   if (arr1.length > arr2.length) {
       return arr1;
   };
   return arr2;
 };
 
-longest();
+longest(arr1, arr2);
+
+
 
 /*As a continuation of the previous problem, write another function called 'both'.
   Your 'both' function will be given two arguments, arr1 and arr2 (from the previous example)
@@ -252,19 +255,29 @@ longest();
 */
 
   //Code Here
-var arr3 = [];
+var both = function(arr1, arr2) {
+  var arr3 = [];
+  var largestArr;
+  var smallestArr;
 
-var both = function(num) {
-  for (var i = 0; i < arr2.length; i++) {
-    if (arr2[i] === num) {
-      arr3.push(arr2[i]);
-    }
-    return arr3;
+  if (arr1.length > arr2.length) {
+    largestArr = arr1;
+    smallestArr = arr2;
+  }
+  else {
+    largestArr = arr2;
+    smallestArr = arr1;
+  };
+  for (var i = 0; i < largestArr.length; i++) {
+    
+    for (var j = 0; j < smallestArr.length; j++) {
+
+      if (largestArr[i] === smallestArr[j]) {
+        arr3.push(largestArr[i]);
+      }
+
+    };
   };
 };
-
-both(arr1);
-
-
 
 
