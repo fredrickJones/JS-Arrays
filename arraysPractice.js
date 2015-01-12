@@ -132,10 +132,16 @@ var str = 'this is my sentence';
 //Write a function called reverse that takes is given str as it's only argument and returns that string after it's been reversed
 
   //Code Here
+var reverse = function() {
+  str = str.reverse();
+  return str;
+};
+
+reverse();
+
 
 
 //Next Problem
-
 
 var myGroceryList = ['chips', 'pizza', 'hotpockets', 'MtnDew', 'corndogs'];
 /*
@@ -149,6 +155,29 @@ var myGroceryList = ['chips', 'pizza', 'hotpockets', 'MtnDew', 'corndogs'];
 */
 
   //Code Here
+var removeItem = function() {
+  for (var i = 0; i < myGroceryList.length; i++) {
+    if (myGroceryList[i] === 'chips') {
+      myGroceryList.splice(i, 1);
+        break;
+    };
+  };
+  return myGroceryList;
+};
+
+removeItem('chips');
+
+var addItem = function() {
+  for (var i = 0; i < myGroceryList.length; i++) {
+    if (myGroceryList[i] !== 'jerky') {
+      myGroceryList.push('jerky');
+        break;
+    };
+  };
+  return myGroceryList;
+};
+
+addItem('jerky');
 
 //removeItem('chips') --> ['pizza', 'hotpockets', 'MtnDew', 'corndogs'];
 //addItem('Jerky') --> ['pizza', 'hotpockets', 'MtnDew', 'corndogs', 'Jerky'];
