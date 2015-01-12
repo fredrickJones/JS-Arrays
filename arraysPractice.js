@@ -229,15 +229,22 @@ var arr1 = [];
 var arr2 = [];
 for(var i = 0; i < num1; i++){
   arr1.push(i);
-}
+};
 for(var i = 0; i < num2; i++){
   arr2.push(i);
-}
+};
 //Above is some code that adds a random number to both arr1 and arr2.
 //Write a function that is given arr1 and arr2 is it's only arguments. Return the array which is longest.
 
   //Code Here
+var longest = function() {
+  if (arr1.length > arr2.length) {
+      return arr1;
+  };
+  return arr2;
+};
 
+longest();
 
 /*As a continuation of the previous problem, write another function called 'both'.
   Your 'both' function will be given two arguments, arr1 and arr2 (from the previous example)
@@ -245,3 +252,19 @@ for(var i = 0; i < num2; i++){
 */
 
   //Code Here
+var arr3 = [];
+
+var both = function(num) {
+  for (var i = 0; i < arr2.length; i++) {
+    if (arr2[i] === num) {
+      arr3.push(arr2[i]);
+    }
+    return arr3;
+  };
+};
+
+both(arr1);
+
+
+
+
